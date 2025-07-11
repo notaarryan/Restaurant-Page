@@ -70,3 +70,148 @@ header>nav>button:hover {
     transform: scale(1.25);
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
+
+div#content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    padding: 20px;
+    height: 100%;
+    grid-auto-flow: row;
+    grid-auto-rows: minmax(400px, 1fr);
+}
+
+div#content>div.left-section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div#content>div.left-section>div.text {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+div#content>div.left-section>div.text>div.top {
+    font-family: var(--main-font);
+    color: var(--secondary-font-color);
+    font-size: 2rem;
+    transform: translateY(90%);
+}
+
+div#content>div.left-section>div.text>div.middle {
+    font-family: var(--secondary-font);
+    color: var(--main-font-color);
+    font-size: 7rem;
+}
+
+div#content>div.left-section>div.text>div.lower {
+    font-family: var(--main-font);
+    color: var(--secondary-font-color);
+    font-size: 0.75rem;
+}
+
+
+div#content>div.left-section>div.images {
+    display: grid;
+    place-items: center;
+    width: 100%;
+}
+
+div#content>div.left-section>div.images>li {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+div#content>div.left-section>div.images>li>img {
+    width: 20%;
+    height: auto;
+}
+
+div#content>div.right-section {
+    display: grid;
+    justify-items: start;
+    align-content: center;
+    justify-content: center;
+}
+
+div#content>div.right-section>img {
+    min-width: 300px;
+    width: 80%;
+    height: auto;
+}
+
+div#content>div#menu-container,
+div#content>div#about-container {
+    justify-self: center;
+    display: grid;
+    grid-template-rows: min(100px, 150px) 1fr;
+}
+
+div#content>div#menu-container>div#menu-text,
+div#content>div#about-container>div#about-text {
+    display: grid;
+    place-items: center;
+    font-family: var(--main-font);
+    color: var(--main-font-color);
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 600;
+}
+
+div#content>div#about-container>div#about-description {
+    justify-self: center;
+    text-align: center;
+    font-family: var(--secondary-font);
+    color: var(--secondary-font-color);
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    width: 50%;
+}
+
+div#content>div#menu-container>div#images {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    gap: 20px;
+}
+
+div#content>div#menu-container>div#images>div {
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.15));
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.25);
+    transition: all 0.5s;
+}
+
+div#content>div#menu-container>div#images>div:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+div#content>div#menu-container>div#images>div>img {
+    width: 80%;
+    height: auto;
+}
+
+div#content>div#menu-container>div#images>div>p {
+    font-family: var(--secondary-font);
+    color: var(--secondary-font-color);
+    text-align: center;
+    font-size: clamp(0.5rem, 2vw, 1.5rem);
+    padding: 5px;
+}
