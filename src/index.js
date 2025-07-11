@@ -45,11 +45,11 @@ class App {
 
   load() {
     let page = localStorage.getItem("currentPage");
-    if (page == "home") {
+    if (page === "home") {
       this.loadHome();
-    } else if ((page = "menu")) {
+    } else if (page === "menu") {
       this.loadMenu();
-    } else if ((page = "about")) {
+    } else if (page === "about") {
       this.loadAbout();
     } else {
       this.loadHome();
